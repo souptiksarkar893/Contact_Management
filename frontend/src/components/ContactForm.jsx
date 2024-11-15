@@ -1,4 +1,3 @@
-// frontend/src/components/ContactForm.jsx
 import React, { useState } from "react";
 import { TextField, Button, Grid, Alert } from "@mui/material";
 

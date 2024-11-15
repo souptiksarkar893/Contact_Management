@@ -1,4 +1,3 @@
-// backend/routes/contactRoutes.js
 const express = require('express');
 const { createContact, getContacts, updateContact, deleteContact } = require('../controllers/contactController');
 
