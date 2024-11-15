@@ -50,12 +50,16 @@ The Contact Management feature helps users keep track of important contact infor
 
 ## Create a .env file with the following content:
 
+```bash
 MONGO_URI=mongodb://localhost:27017/contactManagement
 PORT=5000
+```
 
 ## Start the server:
 
+```bash
 npm start
+```
 
 ## Frontend
 
@@ -63,8 +67,12 @@ npm start
 
 ### Install dependecies:
 
+```bash
 npm install
+```
 
 ## Start the development server:
 
+```bash
 npm run dev
+```
