@@ -1,6 +1,6 @@
 const Contact = require('../models/contactModel');
 
-exports.createContact = async (req, res) => {
+const createContact = async (req, res) => {
     try {
         const contact = new Contact(req.body);
         await contact.save();
@@ -17,7 +17,7 @@ exports.createContact = async (req, res) => {
     }
 };
 
-exports.getContacts = async (req, res) => {
+const getContacts = async (req, res) => {
     try {
         const contacts = await Contact.find();
         res.status(200).json(contacts);
@@ -26,7 +26,7 @@ exports.getContacts = async (req, res) => {
     }
 };
 
-exports.updateContact = async (req, res) => {
+const updateContact = async (req, res) => {
     try {
         const contact = await Contact.findByIdAndUpdate(req.params.id, req.body, { new: true });
         res.status(200).json(contact);
@@ -35,11 +35,18 @@ exports.updateContact = async (req, res) => {
     }
 };
 
-exports.deleteContact = async (req, res) => {
+const deleteContact = async (req, res) => {
     try {
         await Contact.findByIdAndDelete(req.params.id);
         res.status(204).json({ message: 'Contact deleted' });
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
+};
+
+module.exports = {
+    createContact,
+    getContacts,
+    updateContact,
+    deleteContact,
 };
