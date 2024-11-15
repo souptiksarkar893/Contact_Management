@@ -17,11 +17,16 @@ const App = () => {
       .catch((error) => console.error(error));
   }, []);
 
-  const addContact = (contact) => {
-    axios
-      .post("http://localhost:5000/contacts", contact)
-      .then((response) => setContacts([...contacts, response.data]))
-      .catch((error) => console.error(error));
+  const addContact = async (contact) => {
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/contacts",
+        contact
+      );
+      setContacts([...contacts, response.data]);
+    } catch (error) {
+      throw error;
+    }
   };
 
   const updateContact = (id, updatedContact) => {

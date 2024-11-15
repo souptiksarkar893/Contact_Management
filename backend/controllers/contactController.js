@@ -7,7 +7,14 @@ exports.createContact = async (req, res) => {
         await contact.save();
         res.status(201).json(contact);
     } catch (error) {
-        res.status(400).json({ message: error.message });
+        if (error.code === 11000) {
+            // Duplicate key error
+            const field = Object.keys(error.keyPattern)[0];
+            const fieldName = field === 'phoneNumber' ? 'Phone Number' : field.charAt(0).toUpperCase() + field.slice(1);
+            res.status(400).json({ message: `${fieldName} already exists` });
+        } else {
+            res.status(400).json({ message: error.message });
+        }
     }
 };
 
