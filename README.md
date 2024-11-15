@@ -18,26 +18,6 @@ The Contact Management feature helps users keep track of important contact infor
 - **Database**: MongoDB
 - **Other Tools**: Axios, Nodemon
 
-# Contact Management
-
-## Overview
-
-The Contact Management feature helps users keep track of important contact information for customers and clients. It allows users to add, view, update, and delete contact details all in one place. This makes it easy for users to find and manage information, which is especially helpful in a business setting where keeping track of relationships is key.
-
-## Features
-
-- **Add a New Contact**: Users can add a contact with essential details like name, email, phone number, company, and job title.
-- **View Contacts**: A table view lists all contacts, with sorting and pagination options to make large contact lists easier to browse.
-- **Edit Contact Information**: Users can update contact details when information changes.
-- **Delete a Contact**: Users can remove outdated or duplicate entries.
-
-## Tech Stack
-
-- **Frontend**: React, Vite, Material-UI (MUI)
-- **Backend**: Node.js, Express
-- **Database**: MongoDB
-- **Other Tools**: Axios, Nodemon
-
 ## Setup Instructions
 
 ### Backend
@@ -137,13 +117,13 @@ Handling CORS
 Solution: Used the cors middleware in the backend to allow cross-origin requests.
 
 Form Validation
-Solution: Implemented lon validation in the frontend using MUI components and handled errors in the backend using Mongouse validation.
+Solution: Implemented form validation in the frontend using MUI components and handled errors in the backend using Mongoose validation.
 
 Connecting Frontend to Backend
-Solution: Used Axios lur making HTTP requests from the frontend to the backend API endpoints.
+Solution: Used Axios for making HTTP requests from the frontend to the backend API endpoints.
 
 Edit Functionality
-Solution: Added a dialog component to handle editing of contact details and updated the state management in the parent component
+Solution: Added a dialog component to handle editing of contact details and updated the state management in the parent component.
 ```
 
 ## Database Choice
