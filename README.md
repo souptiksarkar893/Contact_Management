@@ -97,9 +97,12 @@ module.exports = mongoose.model('Contact', contactSchema);
 ## Major Technical Decisions
 
 ```bash
-1. Tech Stack: The MERN stack (MongoDB, Express, leact, Node.js) was chosen for its popularity and efficiency in building full-stack applications. Vite was used for its fast build times and modern development fratures
+1. Tech Stack: The MERN stack (MongoDB, Express, leact, Node.js) was chosen for its popularity and efficiency in building full-stack applications. Vite was used for its fast build times and modern development fratures.
+
 2. Material-UI (MUI): MUI was chosen for the frontend to provide a consistent and modern Ut with pre-built components.
-3. Axios: Axins was used for making HITIP requests from the frontend to the backond due to its simplicity and ease of use
+
+3. Axios: Axins was used for making HITIP requests from the frontend to the backond due to its simplicity and ease of use.
+
 4. Nodemort: Nodemon was used in the backend for automatic server restarts during development, improving the developnrent workflow.
 ```
 
@@ -141,4 +144,10 @@ Solution: Used Axios lur making HTTP requests from the frontend to the backend A
 
 Edit Functionality
 Solution: Added a dialog component to handle editing of contact details and updated the state management in the parent component
+```
+
+## Database Choice
+
+```bash
+MongoDB was chosen for this project due to its felexibility and ease of use with JSON-like documents, which aligns well with the structure of contact information.
 ```
